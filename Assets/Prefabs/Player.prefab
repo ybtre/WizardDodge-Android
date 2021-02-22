@@ -51,7 +51,7 @@ MonoBehaviour:
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000abe58ed397242dca6b030ef037dff5a5
   m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
+  m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 0.78
-  m_PointLightDistance: 3
+  m_PointLightDistance: 11.85
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
@@ -241,6 +241,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5712343091938892192}
     m_Modifications:
+    - target: {fileID: 106644163951114444, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 106644163951114444, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 106644163951114444, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106644163951114444, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 372.16382
+      objectReference: {fileID: 0}
+    - target: {fileID: 106644163951114444, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 144.92163
+      objectReference: {fileID: 0}
+    - target: {fileID: 106644163951114444, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -92
+      objectReference: {fileID: 0}
     - target: {fileID: 1262010981846695630, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
         type: 3}
       propertyPath: m_Name
@@ -384,6 +414,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 5712343091938892192}
     m_Modifications:
     - target: {fileID: 2050188446, guid: 2c4f945b10a556844811fb8397b6b6fb, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1200035042}
+    - target: {fileID: 5771116780723985742, guid: 2c4f945b10a556844811fb8397b6b6fb,
+        type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 1200035042}

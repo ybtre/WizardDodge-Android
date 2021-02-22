@@ -379,7 +379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64000016, y: 1.3499995, z: -10}
+  m_LocalPosition: {x: -0.6400003, y: 1.3499995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1684263273}
@@ -476,7 +476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768248105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64000016, y: 1.3499995, z: -10}
+  m_LocalPosition: {x: -0.6400003, y: 1.3499995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1416544312}
@@ -21438,26 +21438,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1922310394949903824, guid: 26285bc8c679382438e2112ae5d2da5b,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 136.7309
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922310394949903824, guid: 26285bc8c679382438e2112ae5d2da5b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 46.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971184973468549985, guid: 26285bc8c679382438e2112ae5d2da5b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 191.90039
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971184973468549985, guid: 26285bc8c679382438e2112ae5d2da5b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -2.8999023
-      objectReference: {fileID: 0}
+    - target: {fileID: 1990571420, guid: 26285bc8c679382438e2112ae5d2da5b, type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 5712343090789584256}
     - target: {fileID: 5608910303637932051, guid: 26285bc8c679382438e2112ae5d2da5b,
         type: 3}
       propertyPath: m_Name
@@ -21568,11 +21552,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8190800192081007520, guid: 26285bc8c679382438e2112ae5d2da5b,
-        type: 3}
-      propertyPath: m_margin.y
-      value: -2.3041315
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26285bc8c679382438e2112ae5d2da5b, type: 3}
 --- !u!4 &4863812266388728121
@@ -21627,6 +21606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1200035042, guid: 474e281ba649dff43a183ccecf2c37ed, type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 5712343090789584256}
     - target: {fileID: 657295332405177649, guid: 474e281ba649dff43a183ccecf2c37ed,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -21697,5 +21680,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6829077215873612578, guid: 474e281ba649dff43a183ccecf2c37ed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474e281ba649dff43a183ccecf2c37ed, type: 3}
+--- !u!223 &5712343090789584256 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6829077215873612638, guid: 474e281ba649dff43a183ccecf2c37ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 5712343090789584255}
+  m_PrefabAsset: {fileID: 0}

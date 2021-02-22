@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -11,7 +12,6 @@ public class Player : MonoBehaviour {
     private float currScore = 0;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Canvas GameOverCanvas;
-
 
     private Rigidbody2D myRb;
     private float acclInput;
