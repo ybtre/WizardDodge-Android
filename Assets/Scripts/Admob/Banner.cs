@@ -5,7 +5,8 @@ using UnityEngine;
 public class Banner : MonoBehaviour
 {
     BannerView banner;
-    string bannerId = "ca-app-pub-2773820500248665/9426512810";
+    string bannerId = "ca-app-pub-2773820500248665/9426512810";  //AD ID
+    // string bannerId = "ca-app-pub-3940256099942544/6300978111";  TEST ID
     
     void Start()
     {

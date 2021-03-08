@@ -8,6 +8,7 @@ TagManager:
   - GameOverCanvas
   - Enemy
   - Score
+  - Touch
   layers:
   - Default
   - TransparentFX

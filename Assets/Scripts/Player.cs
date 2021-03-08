@@ -1,20 +1,24 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     [SerializeField] private float moveSpeed = 100f;
+    [SerializeField] private float touch_moveSpeed = 200f;
     [SerializeField] private float acclSpeed = 300f;
     [SerializeField] private Vector2 deathKick = new Vector2(5, 5);
+    
+    public bool TouchControls = true;
 
     private bool isAlive = true;
     private float currScore = 0;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Canvas GameOverCanvas;
 
-
     private Rigidbody2D myRb;
     private float acclInput;
+    private float ScreenWidth;
 
     private Animator myAnimator;
     private static readonly int IsRunning = Animator.StringToHash("IsRunning");
@@ -27,6 +31,8 @@ public class Player : MonoBehaviour {
         myAnimator = GetComponent<Animator>();
         scoreText.text = currScore.ToString();
 
+        ScreenWidth = Screen.width;
+
         // currScore = PlayerPrefsController.GetMasterScore();
     }
 
@@ -35,8 +41,14 @@ public class Player : MonoBehaviour {
             return;
         }
 
-        Move();
+        if (TouchControls) {
+            MoveWithTouch();
+        }
+        else {
+            MoveWithTilt();
+        }
     }
+    
 
     // Update is called once per frame
     void Update() {
@@ -60,7 +72,7 @@ public class Player : MonoBehaviour {
         scoreText.text = string.Format("{0:00}", seconds.ToString());
     }
 
-    private void Move() {
+    private void MoveWithTilt() {
         float currInput = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         acclInput = Input.acceleration.x * acclSpeed * Time.deltaTime;
 
@@ -72,6 +84,47 @@ public class Player : MonoBehaviour {
             myRb.velocity = new Vector2(acclInput, myRb.velocity.y);
         }
 
+        ChangeAnimation_Running();
+    }
+
+    private void MoveWithTouch() {
+        int i = 0;
+        
+        // loop every touch found
+        while(i < Input.touchCount)
+        {
+            if (Input.GetTouch(i).position.x > ScreenWidth / 2) {
+                SetVelocity(1);
+            }
+
+            if (Input.GetTouch(i).position.x < ScreenWidth / 2) {
+                SetVelocity(-1);
+            }
+
+            ++i;
+        }
+
+        void SetVelocity(float horizontalInput) {
+            Vector2 velocity = new Vector2(horizontalInput * touch_moveSpeed * Time.deltaTime, myRb.velocity.y);
+            myRb.velocity = velocity;
+
+            ChangeAnimation_Running();
+        }
+    }
+    // public void MoveWithTouch_Left() {
+    //     Vector2 velocityPlayer = new Vector2(-touch_moveSpeed * Time.deltaTime, myRb.velocity.y);
+    //     myRb.velocity = velocityPlayer;
+    //     
+    //     ChangeAnimation_Running();
+    // }
+    // public void MoveWithTouch_Right() {
+    //     Vector2 velocityPlayer = new Vector2(touch_moveSpeed * Time.deltaTime, myRb.velocity.y);
+    //     myRb.velocity = velocityPlayer;
+    //     
+    //     ChangeAnimation_Running();
+    // }
+    
+    void ChangeAnimation_Running() {
         bool playerHasHorizontalSpeed = Mathf.Abs(myRb.velocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed) {
             myAnimator.SetBool(IsRunning, true);

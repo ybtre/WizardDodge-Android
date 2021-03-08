@@ -144,7 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26fc5e72030a194a9126a4c2aa16ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyVFX: {fileID: 0}
+  destroyVFX: {fileID: 3390663373340822303, guid: f3f3b72386daae743b60ddcc6118d4f5,
+    type: 3}
   destroyVFX_Duration: 1
   myPlayer: {fileID: 0}
 --- !u!1 &7585067512556500477
