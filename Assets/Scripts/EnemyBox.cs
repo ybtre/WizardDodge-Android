@@ -12,13 +12,13 @@ public class EnemyBox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.layer == 8){
-            // DestroyVFX();
+            DestroyVFX();
             Destroy(this.gameObject);
         }
     }
 
-    // private void DestroyVFX(){
-    //     GameObject explosion = Instantiate(destroyVFX, transform.position, transform.rotation);
-    //     Destroy(explosion, destroyVFX_Duration);
-    // }
+    private void DestroyVFX(){
+        GameObject explosion = Instantiate(destroyVFX, transform.position, transform.rotation);
+        Destroy(explosion, destroyVFX_Duration);
+    }
 }

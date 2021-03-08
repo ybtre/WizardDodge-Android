@@ -147,7 +147,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,10 +230,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 225
+  touch_moveSpeed: 10
   acclSpeed: 400
   deathKick: {x: 5, y: 5}
+  TouchControls: 1
   scoreText: {fileID: 1655412991746951249}
   GameOverCanvas: {fileID: 3072688115361339475}
+  TouchCanvas: {fileID: 0}
 --- !u!1001 &5712343090497390060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -394,6 +397,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5712343090497390060}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &6829077215873612638 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1262010981846695602, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
+    type: 3}
+  m_PrefabInstance: {fileID: 5712343090497390060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1655412991746951249 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6466998223619083709, guid: 2f0cb47a8dcac1b48a02a63a62a05116,
@@ -422,6 +431,11 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1200035042}
+    - target: {fileID: 5771116780723985742, guid: 2c4f945b10a556844811fb8397b6b6fb,
+        type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 6829077215873612638}
     - target: {fileID: 7550240740917653840, guid: 2c4f945b10a556844811fb8397b6b6fb,
         type: 3}
       propertyPath: m_Pivot.x
